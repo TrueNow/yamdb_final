@@ -28,9 +28,9 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ../static/redoc.html:/usr/share/nginx/html/api/redoc.html
       - static_value:/var/html/static/
       - media_value:/var/html/media/
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ../static/redoc.html:/var/html/static/redoc.html
     depends_on:
       - web
