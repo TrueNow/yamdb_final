@@ -14,7 +14,7 @@ services:
       - ./.env
 
   web:
-    image: s3r3ga/yamdb:v1.0
+    image: s3r3ga/yamdb_final:latest
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
