@@ -32,5 +32,6 @@ services:
       - media_value:/var/html/media/
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./yamdb_final/static/redoc.yaml:/var/html/static/redoc.yaml
+      - ./yamdb_final/static/redoc.html:/var/html/static/redoc.ht,l
     depends_on:
       - web
