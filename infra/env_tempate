@@ -1,0 +1,8 @@
+SECRET_KEY=secretkeysecretkeysecretkeysecretkeysecretkeysecr
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=postgres_db
+POSTGRES_USER=postgres_user
+POSTGRES_PASSWORD=postgres_pass
+DB_HOST=db
+DB_PORT=5432
+ALLOWED_HOSTS=127.0.0.1
