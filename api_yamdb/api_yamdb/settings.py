@@ -13,7 +13,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='s3cr3t-k3y')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS', default='allowed_host')]
 
 
 # Application definition

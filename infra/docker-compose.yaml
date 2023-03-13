@@ -15,8 +15,13 @@ services:
 
   web:
     image: s3r3ga/yamdb_final:latest
+    restart: always
     volumes:
-      - static_value:/app/static/
+      - type: volume
+        source: static_value
+        target: /app/static/
+        volume:
+          nocopy: false
       - media_value:/app/media/
     depends_on:
       - db
@@ -28,10 +33,12 @@ services:
     ports:
       - "80:80"
     volumes:
-      - static_value:/var/html/static/
-      - media_value:/var/html/media/
+      - type: volume
+        source: static_value
+        target: /var/html/static/
+        volume:
+          nocopy: false
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./yamdb_final/static/redoc.yaml:/var/html/static/redoc.yaml
-      - ./yamdb_final/static/redoc.html:/var/html/static/redoc.ht,l
+      - media_value:/var/html/media/
     depends_on:
       - web
